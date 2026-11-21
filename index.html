@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Year 7: screens, phones &amp; social media</title>
+<meta name="description" content="Three quick questions for Queen's Year 7 parents. Tap to answer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mgrassq.github.io/queens-year7/">
+<meta property="og:title" content="Year 7: screens, phones &amp; social media">
+<meta property="og:description" content="What do you think? Three quick questions for Queen's Year 7 parents. Tap to answer.">
+<meta property="og:image" content="https://mgrassq.github.io/queens-year7/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#F4F6F7;font-family:Inter,system-ui,sans-serif;color:#172433;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:600px;margin:0 auto;background:#fff;min-height:100vh}
+  h1,h2,.num,.close p{font-family:'Space Grotesk',Inter,sans-serif}
+  header{background:#0B2E33;color:#fff;padding:32px 22px 24px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#A7E3D9}
+  h1{margin:10px 0 10px;font-size:32px;line-height:1.05}
+  .lead{margin:0;font-size:16.5px;line-height:1.45;color:#E6F2F0}
+  header{--c:#A7E3D9}
+  .hbg{margin-top:14px;font-size:14.5px;line-height:1.5;color:#E6F2F0}
+  .hbg summary{color:#A7E3D9}
+  .hbg .chart{margin:14px 0 6px;background:rgba(255,255,255,.06);border-radius:12px;padding:12px 12px 6px}
+  .hbg figcaption{font-size:13px;font-weight:600;color:#fff;margin-bottom:22px}
+  .hbg svg{display:block;width:100%;max-width:340px;height:auto;margin:0 auto;overflow:visible}
+  .hbg .bg a{color:#A7E3D9}
+  .hbg .closebg{background:transparent}
+  .hbg details.deep{border-top-color:rgba(255,255,255,.15)}
+  main{padding:18px 14px 6px;display:flex;flex-direction:column;gap:12px}
+  .card{border-radius:16px;padding:16px;background:var(--bg)}
+  .top{display:flex;align-items:center;gap:10px}
+  .num{flex:none;width:30px;height:30px;border-radius:15px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+  h2{margin:0;font-size:19px;color:var(--c)}
+  .q{margin:10px 0 12px;font-size:16.5px;line-height:1.4;font-weight:600}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{font:inherit;font-size:15px;font-weight:600;min-height:44px;padding:10px 16px;border-radius:999px;border:1.5px solid var(--c);background:#fff;color:var(--c);cursor:pointer}
+  .opt[aria-pressed="true"]{background:var(--c);color:#fff}
+  details{margin-top:12px;font-size:14px;line-height:1.5;color:#2A3642}
+  summary{cursor:pointer;font-weight:600;color:var(--c);font-size:13px}
+  details > ul.short{margin:8px 0 0;padding-left:18px}
+  details > ul.short li+li{margin-top:5px}
+  .closebg{display:block;margin:14px 0 0 auto;font:inherit;font-size:13px;font-weight:700;color:var(--c);background:#fff;border:1.5px solid var(--c);border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer}
+  details.deep{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,.08)}
+  .bg{margin-top:4px}
+  .bg h3{margin:14px 0 4px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+  .bg ul{margin:0;padding-left:18px}
+  .bg li+li{margin-top:5px}
+  .bg ul.links{list-style:none;padding-left:0}
+  .bg a{color:var(--c);font-weight:600;text-underline-offset:2px}
+  .s1{--c:#0F766E;--bg:#E6F4F1}
+  .s2{--c:#C2410C;--bg:#FDEEE5}
+  .s3{--c:#1D4ED8;--bg:#E8EEFD}
+  .s4{--c:#0B2E33;--bg:#EEF1F3}
+  .close{margin:6px 14px 0;padding:18px;border-radius:16px;background:#FFF4DE}
+  .close p{margin:0 0 12px;font-size:19px;font-weight:700;line-height:1.25}
+  .lbl{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+  .name{display:block;width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid #D9C79E;border-radius:12px;background:#fff;margin-bottom:12px}
+  .name:focus{outline:3px solid #0B2E33;outline-offset:1px}
+  .send{display:block;width:100%;font:inherit;font-size:17px;font-weight:700;color:#fff;background:#0B2E33;border:0;border-radius:12px;padding:16px;cursor:pointer}
+  .send{text-align:center;text-decoration:none;box-sizing:border-box}
+  .send.off{background:#8A979F}
+  .note.flash{color:#B42318;font-weight:700}
+  .note{margin:10px 0 0;font-size:13px;line-height:1.4;color:#5B4A1F}
+  footer{padding:16px 20px 30px;font-size:12px;color:#5B6470}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Queen's College London · Year 7</div>
+  <h1>Screens, phones &amp; social media</h1>
+  <p class="lead">Some of us have been talking about this. What do you think? Tap your answers, then send.</p>
+  <details class="hbg"><summary>Background</summary>
+    <figure class="chart" aria-label="Children aged 8 to 16 in England with a probable mental disorder: 12.5% in 2017, 20.3% in 2023">
+      <figcaption>Children aged 8&ndash;16 in England with a probable mental disorder (NHS)</figcaption>
+      <svg viewBox="0 0 320 150" role="img" aria-hidden="true">
+        <line x1="20" y1="120" x2="300" y2="120" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+        <rect x="55" y="46" width="80" height="74" rx="6" fill="#5EEAD4"/>
+        <rect x="185" y="0" width="80" height="120" rx="6" fill="#FDBA74"/>
+        <text x="95" y="38" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Space Grotesk, Inter, sans-serif">12.5%</text>
+        <text x="225" y="-8" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Space Grotesk, Inter, sans-serif">20.3%</text>
+        <text x="95" y="140" text-anchor="middle" fill="#E6F2F0" font-size="13" font-family="Inter, sans-serif">2017 &middot; 1 in 8</text>
+        <text x="225" y="140" text-anchor="middle" fill="#E6F2F0" font-size="13" font-family="Inter, sans-serif">2023 &middot; 1 in 5</text>
+      </svg>
+    </figure>
+    <ul class="short">
+      <li>Rates had risen only slightly in the decade before 2017.</li>
+      <li>The book <em>The Anxious Generation</em> (Jonathan Haidt, 2024) charts similar rises in teen anxiety and depression in many countries from around 2012, and links them to smartphones and social media. Other researchers question how much phones are the cause.</li>
+    </ul>
+    <details class="deep"><summary>Read more &amp; resources</summary><div class="bg">
+      <ul class="links">
+        <li><a href="https://anxiousgeneration.com/" target="_blank" rel="noopener">The Anxious Generation: charts, research and the &ldquo;four norms&rdquo;</a></li>
+        <li><a href="https://www.england.nhs.uk/2023/11/one-in-five-children-and-young-people-had-a-probable-mental-disorder-in-2023/" target="_blank" rel="noopener">NHS England: 1 in 5 children had a probable mental disorder (2023)</a></li>
+        <li><a href="https://www.nature.com/articles/d41586-024-00902-2" target="_blank" rel="noopener">Nature: a critical review of the book</a></li>
+        <li><a href="https://smartphonefreechildhood.co.uk/" target="_blank" rel="noopener">Smartphone Free Childhood (UK parents&rsquo; movement)</a></li>
+      </ul>
+    </div></details>
+    <button class="closebg" type="button">Close &#9650;</button>
+  </details>
+</header>
+
+<main>
+  <section class="card s1" data-q="1">
+    <div class="top"><div class="num">1</div><h2>Screens</h2></div>
+    <p class="q">How much of Year 7 learning should be on a screen?</p>
+    <div class="opts"><button class="opt">Less than now</button><button class="opt">About right</button><button class="opt">More</button><button class="opt">Not sure</button></div>
+    <details><summary>Background</summary><ul class="short"><li>Queen's asks families to provide a learning device.</li><li>Schools differ: Highgate teaches mostly on paper; Putney says devices aren't essential for homework.</li></ul>
+    <details class="deep"><summary>Read more &amp; resources</summary><div class="bg">
+      <h3>At Queen's</h3><ul>
+        <li>Queen's asks families to provide a learning device for Year 7.</li>
+        <li>We couldn't find a published figure for how much Year 7 work needs a screen, at Queen's or any other school.</li>
+      </ul>
+      <h3>Other London schools (18 compared)</h3><ul>
+        <li>Highgate: paper-based lessons, no routine one-device-per-pupil scheme.</li>
+        <li>Putney High: tablets and laptops are not essential for homework.</li>
+        <li>Channing: a mix of paper and digital, with Year 7 homework time guidance.</li>
+        <li>South Hampstead: a one-to-one iPad programme, with screen-use guidance for families.</li>
+      </ul>
+      <h3>Wider evidence</h3><ul>
+        <li>UNESCO's 2023 global education report found little robust evidence that digital technology adds value to learning, and that benefits fade when it is overused.</li>
+        <li>In 2024 the House of Commons Education Committee reported on screen time's impact on children's education and wellbeing.</li>
+      </ul>
+      <h3>Read more</h3><ul class="links">
+        <li><a href="https://gem-report-2023.unesco.org/" target="_blank" rel="noopener">UNESCO: Technology in education (2023)</a></li>
+        <li><a href="https://committees.parliament.uk/work/7912/" target="_blank" rel="noopener">House of Commons: Screen time inquiry</a></li>
+      </ul>
+    </div></details>
+    <button class="closebg" type="button">Close &#9650;</button></details>
+  </section>
+
+  <section class="card s2" data-q="2">
+    <div class="top"><div class="num">2</div><h2>Phones</h2></div>
+    <p class="q">Are the Yondr pouches working as intended?</p>
+    <div class="opts"><button class="opt">Yes</button><button class="opt">Partly</button><button class="opt">No</button><button class="opt">Don't know</button></div>
+    <details><summary>Background</summary><ul class="short"><li>Queen's uses Yondr pouches, as do 10 of 18 London schools we compared.</li><li>Some parents have heard pupils can still use phones in them.</li></ul>
+    <details class="deep"><summary>Read more &amp; resources</summary><div class="bg">
+      <h3>At Queen's</h3><ul>
+        <li>Pupils lock phones in Yondr pouches in front of staff; pupils who break the rules are sanctioned.</li>
+        <li>Some parents have heard that pupils can still use phones in the pouches.</li>
+        <li>On one trip, pupils were asked to unlock phones to save a contact number. The school says it will review this.</li>
+      </ul>
+      <h3>Other London schools (18 compared)</h3><ul>
+        <li>10 use pouches, 4 ban smartphones, 2 keep phones off in bags, 1 uses lockers, 1 discourages smartphones.</li>
+        <li>South Hampstead, Channing and St Paul's Boys' publish daily checks, sanctions and measures against workarounds.</li>
+      </ul>
+      <h3>National picture</h3><ul>
+        <li>Since September 2026, statutory government guidance expects schools in England to be phone-free by default.</li>
+        <li>In November 2026 the government said it will go further: phones out of reach all day, including breaks and lunch, from September 2027.</li>
+        <li>Schools reporting secure phone storage rose from 9% (May 2025) to 21% (June 2026).</li>
+        <li>OECD research: pupils distracted by others' devices in maths lessons scored lower in maths tests.</li>
+      </ul>
+      <h3>Read more</h3><ul class="links">
+        <li><a href="https://www.gov.uk/government/publications/mobile-phones-in-schools" target="_blank" rel="noopener">DfE: Mobile phones in schools</a></li>
+        <li><a href="https://www.gov.uk/government/news/strengthened-guidance-to-take-the-next-leap-to-phone-free-schools" target="_blank" rel="noopener">DfE: Next step to phone-free schools (Nov 2026)</a></li>
+        <li><a href="https://gem-report-2023.unesco.org/" target="_blank" rel="noopener">UNESCO: Technology in education (2023)</a></li>
+      </ul>
+    </div></details>
+    <button class="closebg" type="button">Close &#9650;</button></details>
+  </section>
+
+  <section class="card s3" data-q="3">
+    <div class="top"><div class="num">3</div><h2>Social media</h2></div>
+    <p class="q">Should the school say more to families about app age limits?</p>
+    <div class="opts"><button class="opt">Yes</button><button class="opt">No</button><button class="opt">Not sure</button></div>
+    <details><summary>Background</summary><ul class="short"><li>WhatsApp and most social apps have a minimum age of 13.</li><li>The school acknowledges the limits and is considering a reminder to Year 7 parents.</li></ul>
+    <details class="deep"><summary>Read more &amp; resources</summary><div class="bg">
+      <h3>At Queen's</h3><ul>
+        <li>The school acknowledges app age limits and agrees pupils would be best placed to follow them.</li>
+        <li>A reminder to Year 7 parents is being considered.</li>
+        <li>A Childnet online-safety talk for pupils, and a webinar for parents, are planned for 7 January.</li>
+      </ul>
+      <h3>The age limits</h3><ul>
+        <li>WhatsApp's minimum age in the UK is 13 (lowered from 16 in April 2024). Most social apps are 13+.</li>
+        <li>In June 2026 the government announced a ban on social media for under-16s, expected from spring 2027. Messaging apps like WhatsApp are not intended to be covered.</li>
+        <li>In the government's consultation, 9 in 10 parents backed an under-16 ban.</li>
+      </ul>
+      <h3>Other London schools</h3><ul>
+        <li>South Hampstead: no social media under 16.</li>
+        <li>Highgate: explicitly supports delaying social media.</li>
+        <li>Putney High: supports delay, with guidance for parents.</li>
+        <li>Channing: social apps blocked on school devices.</li>
+      </ul>
+      <h3>Read more</h3><ul class="links">
+        <li><a href="https://www.gov.uk/government/publications/fact-sheet-new-rules-to-protect-children-online/fact-sheet-new-rules-to-protect-children-online" target="_blank" rel="noopener">UK government: New rules to protect children online</a></li>
+        <li><a href="https://www.childnet.com/parents-and-carers/" target="_blank" rel="noopener">Childnet: Advice for parents and carers</a></li>
+        <li><a href="https://smartphonefreechildhood.co.uk/" target="_blank" rel="noopener">Smartphone Free Childhood</a></li>
+      </ul>
+    </div></details>
+    <button class="closebg" type="button">Close &#9650;</button></details>
+  </section>
+
+  <section class="card s4" data-q="4">
+    <p class="q" style="margin-top:0">Would you support parents raising this with the school together?</p>
+    <div class="opts"><button class="opt">Yes</button><button class="opt">Maybe</button><button class="opt">No</button></div>
+  </section>
+</main>
+
+<section class="close">
+  <p>Thank you. One tap to send.</p>
+  <label class="lbl" for="name">Your name</label>
+  <input class="name" id="name" type="text" autocomplete="name" placeholder="e.g. Anna (Mia's mum)">
+  <a class="send off" id="send" href="https://wa.me/" target="_blank" rel="noopener">Send my answers</a>
+  <p class="note" id="note">Add your name and answer at least one question. WhatsApp will open with your answers ready to send.</p>
+</section>
+
+<footer>Background from schools' published policies and correspondence with the College, November 2026.</footer>
+</div>
+
+<script>
+var PHONE = '447787780850';
+var labels = {1:'Screens',2:'Phones',3:'Social media',4:'Raise together'};
+var nameEl = document.getElementById('name');
+function ready(){
+  var ok = nameEl.value.trim() && Object.keys(answers).length;
+  var btn = document.getElementById('send');
+  btn.classList.toggle('off', !ok);
+  var lines = ['Year 7 screens, phones & social media', 'From: ' + nameEl.value.trim()];
+  [1,2,3,4].forEach(function(q){ lines.push(q + '. ' + labels[q] + ': ' + (answers[q] || '-')); });
+  var to = /^\d{8,15}$/.test(PHONE) ? PHONE : '';
+  btn.href = 'https://wa.me/' + to + '?text=' + encodeURIComponent(lines.join('\n'));
+  return ok;
+}
+nameEl.addEventListener('input', function(){ ready(); });
+var answers = {};
+document.querySelectorAll('.card').forEach(function(card){
+  var q = card.getAttribute('data-q');
+  var opts = card.querySelectorAll('.opt');
+  opts.forEach(function(b){
+    b.setAttribute('aria-pressed','false');
+    b.addEventListener('click', function(){
+      opts.forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      answers[q] = b.textContent;
+      ready();
+    });
+  });
+});
+document.querySelectorAll('.closebg').forEach(function(b){
+  b.addEventListener('click', function(){
+    var outer = b.closest('details');
+    outer.querySelectorAll('details').forEach(function(d){ d.open = false; });
+    outer.open = false;
+    b.closest('.card, header').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+document.getElementById('send').addEventListener('click', function(e){
+  if (!ready()) {
+    e.preventDefault();
+    var n = document.getElementById('note');
+    n.classList.add('flash');
+    if (!nameEl.value.trim()) nameEl.focus();
+  }
+});
+</script>
+</body>
+</html>
